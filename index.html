@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Pizzaria</title>
 </head>
@@ -15,9 +16,9 @@
 
             <div class="nav-list">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Cardápio</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Cardápio</a></li>
                 </ul>
                 <div class="mobile-menu-icon">
                     <button><img class="icon" src="Imagens/menu_white_36dp.svg" alt="menu"></button>
@@ -27,15 +28,15 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-content">
                 <h1 class="hero-title">A Melhor Pizza da Cidade</h1>
                 <p class="hero-subtitle">Experimente os sabores que vão te conquistar!</p>
-                <a href="#" class="btn">Ver Cardápio</a>
+                <a href="#menu" class="btn">Ver Cardápio</a>
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="about-content">
                 <div class="about-text">
                     <h2>Sobre nossa Pizzaria</h2>
@@ -47,7 +48,7 @@
             </div>
         </section>
 
-        <section class="menu">
+        <section class="menu" id="menu">
             <h2 class="menu-title">Nosso Cardápio</h2>
             <div class="menu-grid">
                 <!-- O conteúdo do menu será gerado dinamicamente pelo menu.js -->
@@ -87,6 +88,64 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div id="footer-contect">
+            <div id="footer-contacts">
+                <img src="Imagens/Logo.png" alt="Pizzaria Logo" class="footer-logo">
+                <p>A melhor pizza da cidade, feita com paixão.</p>
+
+                <div class="footer-social-media">
+                  <a href="#" class="footer-link" id="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+
+                  <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Navegação</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Início</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobre</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cardápio</a>
+                </li>
+            </ul>
+
+            <div class="footer-list">
+                <h3>Contato</h3>
+                <address class="footer-address">
+                    <p><i class="fa-solid fa-location-dot"></i> Rua Fictícia, 123</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 99999-8888</p>
+                    <p><i class="fa-solid fa-envelope"></i> contato@pizzaria.com</p>
+                </address>
+            </div>
+
+            <div class="footer-list">
+                <h3>Horário</h3>
+                <p>Segunda a Sexta: 18h - 23h</p>
+                <p>Sábado e Domingo: 18h - 00h</p>
+            </div>
+        </div>
+
+        <div id="footer-copywright">
+            <p>&copy; 2025 Pizzaria. All rights reserved.</p>
+            <p>Developed by Erick</p>
+        </div>
+    </footer>
 
     <script src="data.js"></script>
     <script src="menu.js"></script>
