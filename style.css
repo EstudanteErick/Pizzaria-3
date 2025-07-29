@@ -8,9 +8,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 header {
     background-color: #c62828; /* Vermelho Tomate */
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .nav-bar {
@@ -515,7 +523,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-}
+
 
 @media (max-width: 1024px) {
     #footer-contect {
@@ -639,6 +647,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: -35px;
+    transition: transform 0.3s ease;
+}
+
     .about-content {
         flex-direction: column;
     }
@@ -716,13 +733,21 @@ footer {
 
 /* Estilos para o menu mobile */
 @media screen and (max-width: 768px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-list > .nav-menu > .nav-item {
+        display: none;
+    }
+
     .nav-menu {
         position: fixed;
         top: 80px;
         right: -100%;
         width: 100%;
         height: 100vh;
-        background-color: #c62828; /* Vermelho Tomate */
+        background-color: #c62828;
         flex-direction: column;
         align-items: center;
         transition: right 0.3s ease-in-out;
@@ -732,24 +757,9 @@ footer {
         right: 0;
     }
 
-    .nav-item {
-        margin: 2rem 0;
-        opacity: 0;
-    }
-
     .nav-menu.active .nav-item {
-        animation: navLinkFade 0.5s ease forwards 0.2s;
-    }
-
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        display: block;
+        margin: 2rem 0;
     }
 
     .mobile-menu-icon {
@@ -760,14 +770,5 @@ footer {
         background: none;
         border: none;
         cursor: pointer;
-        margin-left: 1rem;
-    }
-
-    .logo img {
-     margin-left: -58px;
-    }
-
-    .icon {
-        margin-left: 145px;
     }
 }

@@ -1,6 +1,7 @@
 const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 const navMenu = document.querySelector('.nav-menu');
 const menuGrid = document.querySelector('.menu-grid');
+const body = document.querySelector('body');
 
 // Carrega os dados do menu do arquivo data.js
 function loadMenu() {
@@ -44,6 +45,7 @@ function loadMenu() {
 // Event listener para o ícone do menu mobile
 mobileMenuIcon.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    body.classList.toggle('menu-open');
     const icon = mobileMenuIcon.querySelector('.icon');
     if (navMenu.classList.contains('active')) {
         icon.src = 'Imagens/close_white_36dp.svg';
